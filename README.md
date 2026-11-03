@@ -20,6 +20,10 @@ mi-primer-portafolio/
 
 ## Cómo verlo
 
+**En línea:** https://jorgetl68.github.io/mi-primer-portafolio/ (publicado con GitHub Pages).
+
+**En tu computadora:**
+
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/JorgeTl68/mi-primer-portafolio.git
