@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portafolio de proyectos escolares de Desarrollo Web Integral.">
     <title>Mi primer portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="encabezado">
-        <nav class="navegacion">
-            <a class="logo" href="#inicio">Mi portafolio</a>
+        <nav class="navegacion contenedor">
+            <a class="logo" href="#inicio"><span class="logo-marca">&lt;/&gt;</span> Mi portafolio</a>
             <ul>
                 <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -21,60 +24,126 @@
 
     <main>
         <section id="inicio" class="portada">
-            <p class="etiqueta">Desarrollo Web Integral</p>
-            <h1>Proyectos escolares versionados con Git y GitHub</h1>
-            <p>Este sitio reúne nuestros trabajos de la materia. Cada cambio queda guardado en el historial del repositorio, sin archivos ZIP repetidos.</p>
-            <a class="boton" href="#proyectos">Ver proyectos</a>
-        </section>
+            <div class="contenedor portada-grid">
+                <div class="portada-texto">
+                    <p class="etiqueta etiqueta-clara">Desarrollo Web Integral</p>
+                    <h1>Proyectos escolares <span class="resaltado">versionados</span> con Git y GitHub</h1>
+                    <p class="portada-descripcion">Este sitio reúne nuestros trabajos de la materia. Cada cambio queda guardado en el historial del repositorio, sin archivos ZIP repetidos.</p>
+                    <div class="acciones">
+                        <a class="boton boton-primario" href="#proyectos">Ver proyectos</a>
+                        <a class="boton boton-secundario" href="https://github.com/JorgeTl68/mi-primer-portafolio">Ver en GitHub</a>
+                    </div>
+                    <ul class="herramientas" aria-label="Herramientas">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
 
-        <section id="sobre-nosotros" class="seccion">
-            <h2>Sobre nosotros</h2>
-            <div class="tarjetas">
-                <article class="tarjeta">
-                    <h3>Juan Miguel Bazaldúa Hernández</h3>
-                    <p>Integrante del equipo.</p>
-                </article>
-                <article class="tarjeta">
-                    <h3>Andrea Vásquez Flores</h3>
-                    <p>Integrante del equipo.</p>
-                </article>
-                <article class="tarjeta">
-                    <h3>Jorge Humberto Torres Luna</h3>
-                    <p>Integrante del equipo.</p>
-                </article>
+                <div class="terminal" aria-hidden="true">
+                    <div class="terminal-barra">
+                        <span class="punto punto-rojo"></span>
+                        <span class="punto punto-amarillo"></span>
+                        <span class="punto punto-verde"></span>
+                        <p>mi-primer-portafolio</p>
+                    </div>
+<pre class="terminal-cuerpo"><code><span class="prompt">$</span> git status
+<span class="comentario"># Revisa qué archivos cambiaron</span>
+<span class="prompt">$</span> git add .
+<span class="comentario"># Prepara los cambios</span>
+<span class="prompt">$</span> git commit -m <span class="texto">"Estructura HTML inicial"</span>
+[main <span class="hash">f3d494e</span>] Estructura HTML inicial
+<span class="prompt">$</span> git push origin main
+<span class="exito">✔ Publicado en GitHub</span></code></pre>
+                </div>
             </div>
         </section>
 
-        <section id="proyectos" class="seccion">
-            <h2>Proyectos</h2>
-            <div class="tarjetas">
-                <article class="tarjeta">
-                    <h3>Mi primer portafolio</h3>
-                    <p>Sitio web estático hecho con HTML y CSS, publicado en GitHub.</p>
-                    <p class="tecnologias">HTML · CSS · Git</p>
-                </article>
-                <article class="tarjeta">
-                    <h3>Control de versiones</h3>
-                    <p>Práctica del flujo de trabajo de Git: git status, git add y git commit.</p>
-                    <p class="tecnologias">Git · GitHub</p>
-                </article>
-                <article class="tarjeta">
-                    <h3>Próximo proyecto</h3>
-                    <p>Espacio reservado para el siguiente trabajo de la materia.</p>
-                    <p class="tecnologias">Por definir</p>
-                </article>
+        <section id="sobre-nosotros" class="seccion">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <p class="etiqueta">Equipo</p>
+                    <h2>Sobre nosotros</h2>
+                    <p>Somos estudiantes de Desarrollo Web Integral y este es nuestro primer portafolio con control de versiones.</p>
+                </div>
+                <div class="tarjetas">
+                    <article class="tarjeta integrante">
+                        <div class="avatar avatar-1">JB</div>
+                        <h3>Juan Miguel Bazaldúa Hernández</h3>
+                        <p>Integrante del equipo</p>
+                    </article>
+                    <article class="tarjeta integrante">
+                        <div class="avatar avatar-2">AV</div>
+                        <h3>Andrea Vásquez Flores</h3>
+                        <p>Integrante del equipo</p>
+                    </article>
+                    <article class="tarjeta integrante">
+                        <div class="avatar avatar-3">JT</div>
+                        <h3>Jorge Humberto Torres Luna</h3>
+                        <p>Integrante del equipo</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion seccion-alterna">
+            <div class="contenedor">
+                <div class="seccion-encabezado">
+                    <p class="etiqueta">Trabajos</p>
+                    <h2>Proyectos</h2>
+                    <p>Lo que hemos construido en la materia, con su código disponible en GitHub.</p>
+                </div>
+                <div class="tarjetas">
+                    <article class="tarjeta proyecto">
+                        <span class="proyecto-numero">01</span>
+                        <h3>Mi primer portafolio</h3>
+                        <p>Sitio web estático hecho con HTML y CSS, publicado en GitHub.</p>
+                        <ul class="chips">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Git</li>
+                        </ul>
+                        <a class="enlace" href="https://github.com/JorgeTl68/mi-primer-portafolio">Ver código <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="tarjeta proyecto">
+                        <span class="proyecto-numero">02</span>
+                        <h3>Control de versiones</h3>
+                        <p>Práctica del flujo de trabajo de Git: git status, git add y git commit.</p>
+                        <ul class="chips">
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                        <a class="enlace" href="https://github.com/JorgeTl68/mi-primer-portafolio/commits/main">Ver historial <span aria-hidden="true">→</span></a>
+                    </article>
+                    <article class="tarjeta proyecto proyecto-proximo">
+                        <span class="proyecto-numero">03</span>
+                        <h3>Próximo proyecto</h3>
+                        <p>Espacio reservado para el siguiente trabajo de la materia.</p>
+                        <ul class="chips">
+                            <li>Por definir</li>
+                        </ul>
+                        <span class="enlace enlace-inactivo">Muy pronto</span>
+                    </article>
+                </div>
             </div>
         </section>
 
         <section id="contacto" class="seccion">
-            <h2>Contacto</h2>
-            <p>Puedes revisar el código fuente de este sitio en nuestro repositorio de GitHub.</p>
-            <a class="boton" href="https://github.com/JorgeTl68/mi-primer-portafolio">Ver repositorio</a>
+            <div class="contenedor">
+                <div class="contacto">
+                    <h2>¿Quieres ver cómo lo hicimos?</h2>
+                    <p>Todo el código fuente y su historial de cambios están en nuestro repositorio público.</p>
+                    <a class="boton boton-claro" href="https://github.com/JorgeTl68/mi-primer-portafolio">Ver repositorio</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer class="pie">
-        <p>Desarrollo Web Integral · 2026</p>
+        <div class="contenedor">
+            <p>Hecho con HTML y CSS · Desarrollo Web Integral · 2026</p>
+        </div>
     </footer>
 </body>
 </html>
