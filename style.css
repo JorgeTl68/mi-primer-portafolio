@@ -1,0 +1,170 @@
+/* Paleta y medidas base */
+:root {
+    --color-fondo: #f7f7fb;
+    --color-superficie: #ffffff;
+    --color-texto: #1f2430;
+    --color-texto-suave: #5b6275;
+    --color-acento: #2f6fed;
+    --color-borde: #e1e4ee;
+    --radio: 12px;
+    --ancho-maximo: 1080px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-acento);
+    text-decoration: none;
+}
+
+/* Encabezado y navegación */
+.encabezado {
+    position: sticky;
+    top: 0;
+    background: var(--color-superficie);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+.logo {
+    font-weight: 700;
+    color: var(--color-texto);
+}
+
+.navegacion ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.navegacion ul a {
+    color: var(--color-texto-suave);
+}
+
+.navegacion ul a:hover {
+    color: var(--color-acento);
+}
+
+/* Portada */
+.portada {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 96px 24px 72px;
+}
+
+.etiqueta {
+    color: var(--color-acento);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+}
+
+.portada h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.2;
+    margin: 12px 0 16px;
+    max-width: 16ch;
+}
+
+.portada p {
+    color: var(--color-texto-suave);
+    max-width: 60ch;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 22px;
+    border-radius: var(--radio);
+    background: var(--color-acento);
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.boton:hover {
+    opacity: 0.9;
+}
+
+/* Secciones y tarjetas */
+.seccion {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 48px 24px;
+}
+
+.seccion h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 24px;
+}
+
+.tarjeta h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    color: var(--color-texto-suave);
+}
+
+.tecnologias {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Pie de página */
+.pie {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--color-texto-suave);
+    border-top: 1px solid var(--color-borde);
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    .navegacion {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .portada {
+        padding-top: 56px;
+    }
+}
