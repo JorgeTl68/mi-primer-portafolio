@@ -33,5 +33,5 @@ mi-primer-portafolio/
 ## Equipo
 
 - Juan Miguel Bazaldúa Hernández
-- Andrea Vásquez Flores
+- Andrea Vázquez Flores
 - Jorge Humberto Torres Luna
